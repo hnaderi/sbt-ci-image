@@ -42,10 +42,10 @@ jobs:
          [[ -z "$SBT_VERSION" ]] && { echo "Failed to get latest sbt version" ; exit 1; }
          echo ::set-output name=VERSION::$SBT_VERSION
       - name: Create docker tag
-       id: create_docker_tag
-       run: |
-         TAG=sbt-ci-image:${{ matrix.javaTag }}_${{ steps.get_sbt_version.outputs.VERSION }}_${{ matrix.scalaVersion }}_${{ matrix.dockerVersion }}
-         echo ::set-output name=TAG::$TAG
+        id: create_docker_tag
+        run: |
+          TAG=sbt-ci-image:${{ matrix.javaTag }}_${{ steps.get_sbt_version.outputs.VERSION }}_${{ matrix.scalaVersion }}_${{ matrix.dockerVersion }}
+          echo ::set-output name=TAG::$TAG
       -
         name: Set up QEMU
         uses: docker/setup-qemu-action@v2
