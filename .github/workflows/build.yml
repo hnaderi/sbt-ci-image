@@ -75,8 +75,8 @@ jobs:
           tags: |
             hnaderi/${{ steps.create_docker_tag.outputs.TAG }}
             ghcr.io/hnaderi/${{ steps.create_docker_tag.outputs.TAG }}
-          build-args:
-            - "SBT_VERSION=${{ steps.get_sbt_version.outputs.VERSION }}"
-            - "JAVA_TAG=${{ matrix.javaTag }}"
-            - "SCALA_VERSION=${{ matrix.scalaVersion }}"
-            - "DOCKER_VERSION=${{ matrix.dockerVersion }}"
+          build-args: |
+            SBT_VERSION=${{ steps.get_sbt_version.outputs.VERSION }}
+            JAVA_TAG=${{ matrix.javaTag }}
+            SCALA_VERSION=${{ matrix.scalaVersion }}
+            DOCKER_VERSION=${{ matrix.dockerVersion }}
