@@ -22,8 +22,8 @@ jobs:
           'eclipse-temurin-focal-17.0.5_8',
           'eclipse-temurin-focal-11.0.17_8',
         ]
-        scalaVersion: ['2.12.17', '2.13.10', '3.2.1']
-        dockerVersion: [ '20.10-cli' ]
+        scalaVersion: ['2.12.17', '2.13.10', '3.2.2']
+        dockerVersion: [ '24.0.2-cli' ]
     steps:
       -
         name: Checkout
